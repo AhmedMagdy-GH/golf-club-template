@@ -41,12 +41,13 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 100px;
 }
 
 body {
     background-color: white;
     font-family: var(--body-font-family);
-    height: 2000px;
+    height: 4000px;
 }
 
 .container {
@@ -312,7 +313,7 @@ body {
     width: 100%;
 }
 
-/*study this*/
+/*study this===================================================*/
 .hero-text-animation {
     display: inline-block;
     position: relative;
@@ -352,6 +353,11 @@ body {
 }
 
 /*==============About-section====================*/
+
+.about {
+    padding: 100px 0 70px;
+}
+
 .about-title {
     text-align: center;
     font-size: 36px;
@@ -464,3 +470,93 @@ body {
     white-space: pre-line;
 }
 
+/*=========================NewsLetter-section===========================*/
+.about-cont {
+    position: relative;
+    background-image: url("../images/About/image-3.jpg");
+    background-position: center;
+    background-size: cover;
+    margin-top: 4rem;
+}
+
+.news-letter {
+    display: inline-block;
+    position: relative;
+    left: 16%;
+    background-color: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(5px) saturate(180%);
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    border-radius: 20px;
+    padding: 50px;
+    min-width: 400px;
+}
+
+.news-letter h2 {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.news-letter p {
+    margin: 1rem 0;
+    color: var(--p-color);
+    font-size: 18px;
+    white-space: pre-line;
+}
+
+.about-upper-wave svg {
+    display: block;
+    position: relative;
+}
+
+.about-under-wave {
+    position: relative;
+    bottom: -1px;
+    transform: rotate(180deg);
+}
+
+.input-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    background-color: white;
+    border-radius: 100px;
+    padding: 10px 15px;
+}
+
+.input-box input {
+    border: none;
+    outline: none;
+    background-color: white;
+    padding: 10px 15px;
+}
+
+.input-box i {
+    display: inline-block;
+    background-color: transparent;
+    padding: 8px 16px;
+    font-size: 20px;
+    color: var(--p-color);
+}
+
+.input-box input {
+    font-size: 1.2rem;
+}
+
+.input-box button {
+    border: none;
+    outline: none;
+    color: white;
+    background-color: var(--custom-btn-bg-color);
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 100px;
+    transition: all 0.3s;
+    cursor: pointer;
+
+}
+
+.input-box button:hover {
+    background-color: var(--custom-btn-bg-hover-color);
+}
