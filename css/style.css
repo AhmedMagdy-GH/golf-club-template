@@ -47,7 +47,6 @@ html {
 body {
     background-color: white;
     font-family: var(--body-font-family);
-    height: 4000px;
 }
 
 .container {
@@ -471,7 +470,7 @@ body {
 }
 
 /*=========================NewsLetter-section===========================*/
-.newletter{
+.newletter {
     position: relative;
     background-image: url("../images/About/image-3.jpg");
     background-position: center;
@@ -558,5 +557,159 @@ body {
 }
 
 .input-box button:hover {
+    background-color: var(--custom-btn-bg-hover-color);
+}
+
+
+/*=======================Membership-section========================*/
+.membership {
+    padding: 100px 0 70px;
+}
+
+.memership-title {
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: -1;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.membership-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    gap: 4rem;
+}
+
+table {
+    width: 100%;
+}
+
+.table-title {
+    margin-bottom: 2rem;
+}
+
+.membership-fees table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+}
+
+.membership-fees thead {
+    background-color: var(--secondary-color);
+}
+
+table thead th:first-child {
+    width: 32% !important;
+}
+
+.membership-fees thead th {
+    color: white;
+    padding: 22px 16px;
+    width: 22%;
+}
+
+table tbody tr td:first-child {
+    width: 32% !important;
+}
+
+.membership-fees tbody td {
+    text-align: center;
+    padding: 1.2rem 1rem;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.diff-bg {
+    background-color: var(--section-bg-color);
+}
+
+.correct-icon {
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+
+.wrong-icon {
+    color: var(--custom-btn-bg-hover-color);
+}
+
+.join-member-title {
+    margin-bottom: 2rem;
+    color: black;
+}
+
+.member-info {
+    background-color: var(--secondary-color);
+    padding: 30px;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    border-radius: 20px;
+}
+
+.member-info h2 {
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.member-info input {
+    position: relative;
+    outline: none;
+    border:none;
+    width: 100%;
+    display: inline-block;
+    border-radius: 100px;
+    color: var(--p-color);
+    font-size: 17px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.member-info input:hover,
+.member-info input:active{
+    outline: 2px solid #000000;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.37);
+}
+
+.member-info input::placeholder {
+    padding-top: 0;
+    font-size: 15px;
+    color: rgb(70, 67, 67);
+    transition: all 0.2s;
+}
+
+.member-info input:focus::placeholder{
+    font-size: 12px;
+    color: var(--p-color);
+    position: absolute;
+    top: 8px;
+    padding-bottom: 5px;
+}
+
+.member-info input:last-of-type {
+    height: 100%;
+    border-radius: 20px;
+    padding-top: 0;
+    font-size: 1rem;
+}
+
+.member-info button {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 15px 10px;
+    border-radius: 40px;
+    margin-bottom: 1rem;
+    background-color: var(--custom-btn-bg-color);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.member-info button:hover {
     background-color: var(--custom-btn-bg-hover-color);
 }
