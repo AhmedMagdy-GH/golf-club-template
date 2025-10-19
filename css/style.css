@@ -471,7 +471,7 @@ body {
 }
 
 /*=========================NewsLetter-section===========================*/
-.about-cont {
+.newletter{
     position: relative;
     background-image: url("../images/About/image-3.jpg");
     background-position: center;
@@ -503,12 +503,12 @@ body {
     white-space: pre-line;
 }
 
-.about-upper-wave svg {
+.newletter-upper-wave svg {
     display: block;
     position: relative;
 }
 
-.about-under-wave {
+.newletter-under-wave {
     position: relative;
     bottom: -1px;
     transform: rotate(180deg);
