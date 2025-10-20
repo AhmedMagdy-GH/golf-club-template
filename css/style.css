@@ -41,6 +41,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
     scroll-padding-top: 100px;
 }
 
@@ -122,6 +123,14 @@ body {
     color: white;
     font-weight: 500;
     transition: all 0.3s;
+}
+
+.nav-link.active {
+    color: var(--link-hover-color);
+}
+
+nav a.active {
+    color: var(--link-hover-color);
 }
 
 .nav-link:hover,
@@ -1185,3 +1194,56 @@ form {
 .footer-links a:hover {
     background-color: var(--primary-color);
 }
+
+.footer-icons p {
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.footer-icons p span {
+    color: var(--p-color);
+    font-size: 18px;
+    font-weight: 400;
+}
+.footer-icons p span:hover {
+    color: var(--link-hover-color);
+}
+
+/*====================== Event-listing======================*/
+
+.event-list-hero {
+    
+    background-image: url("../images/Hero-image/hero-image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.overlay {
+    background: linear-gradient(rgba(39, 48, 83, 0.01) 0%, rgb(39, 48, 83) 100%);
+    position: absolute;
+    inset: 0;
+}
+
+.hero-container{
+    padding: 200px 0;
+}
+
+.event-list-white-text{
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    margin-top: 20%;
+}
+
+.event-list-btn {
+    text-decoration: none;
+}
+
+.event-list-unde-wave {
+    transform: rotate(180deg);
+    bottom: -1px;
+}
+

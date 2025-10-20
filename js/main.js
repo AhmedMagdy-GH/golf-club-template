@@ -44,3 +44,48 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
         requestAnimationFrame(animation);
     });
 });
+
+//================== avtive links and pages ========================
+const navLinks = document.querySelectorAll('.nav-link');
+const currentPage = window.location.pathname.split("/").pop(); // اسم الصفحة الحالية
+
+// ✅ أولاً: فعل اللينك الخاص بالصفحة الحالية (لو هي صفحة من dropdown)
+let isDropdownPage = false;
+navLinks.forEach(link => {
+    const linkHref = link.getAttribute('href');
+    if (linkHref === currentPage) {
+        link.classList.add('active');
+        isDropdownPage = true; // نعلم إننا في صفحة من dropdown
+    }
+});
+
+// ✅ ثانياً: عند الضغط على أي لينك
+navLinks.forEach(link => {
+    link.addEventListener('click', function () {
+        navLinks.forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+    });
+});
+
+// ✅ ثالثاً: لو إحنا في index.html فقط نفعل تأثير السكاشن
+if (!isDropdownPage) {
+    window.addEventListener('scroll', () => {
+        let current = '';
+        document.querySelectorAll('section').forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (scrollY >= sectionTop - sectionHeight / 3) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        if (!current) return;
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + current) {
+                link.classList.add('active');
+            }
+        });
+    });
+}
