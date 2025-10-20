@@ -651,46 +651,61 @@ table tbody tr td:first-child {
     color: white;
 }
 
-.member-info input {
+.member-field {
     position: relative;
-    outline: none;
-    border: none;
+}
+
+.member-field input {
     width: 100%;
-    display: inline-block;
+    padding: 15px 20px;
     border-radius: 100px;
-    color: var(--p-color);
-    font-size: 17px;
-    margin-bottom: 20px;
-    padding: 20px;
-}
-
-.member-info input:hover,
-.member-info input:active {
-    outline: 2px solid #000000;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.37);
-}
-
-.member-info input::placeholder {
-    padding-top: 0;
+    outline: none;
+    border: 1px solid #dee2e6;
     font-size: 15px;
-    color: rgb(70, 67, 67);
-    transition: all 0.2s;
 }
 
-.member-info input:focus::placeholder {
+.member-field input+label {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    color: rgb(70, 67, 67);
+    font-size: 15px;
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+
+.member-field textarea {
+    width: 100%;
+    padding: 15px 20px;
+    border-radius: 20px;
+    outline: none;
+    border: 1px solid #dee2e6;
+    font-size: 15px;
+    height: 100px;
+}
+
+.member-field textarea+label {
+    position: absolute;
+    top: 20%;
+    left: 20px;
+    transform: translateY(-50%);
+    color: rgb(70, 67, 67);
+    font-size: 15px;
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+
+.member-field input:focus+label,
+.member-field input:not(:placeholder-shown)+label,
+.member-field textarea:focus+label,
+.member-field textarea:not(:placeholder-shown)+label {
+    top: 10px;
+    left: 16px;
     font-size: 12px;
     color: var(--p-color);
-    position: absolute;
-    top: 8px;
-    padding-bottom: 5px;
 }
 
-.member-info input:last-of-type {
-    height: 100%;
-    border-radius: 20px;
-    padding-top: 0;
-    font-size: 1rem;
-}
 
 .member-info button {
     border: none;
@@ -733,7 +748,13 @@ table tbody tr td:first-child {
 
 .upcoming-event {
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
+}
+
+.event2 {
+    background-color: white;
+    padding: 30px 20px;
+    border-radius: 20px;
 }
 
 .event-date {
@@ -741,7 +762,7 @@ table tbody tr td:first-child {
     text-align: center;
     background-color: var(--primary-color);
     width: 15%;
-    height: 100px;
+    height: 110px;
     border-radius: 20px;
 }
 
@@ -810,7 +831,9 @@ table tbody tr td:first-child {
 
 .event-details {
     width: 45%;
+    margin-top: 1rem;
 }
+
 .event-details h2:first-of-type {
     font-size: 28px;
     font-weight: 500;
@@ -822,7 +845,7 @@ table tbody tr td:first-child {
     font-weight: 400;
     color: var(--p-color);
     padding-bottom: 1.5rem;
-    border-bottom: 1px solid #dee2e6 ;
+    border-bottom: 1px solid #dee2e6;
 }
 
 .sub-info {
@@ -836,10 +859,12 @@ table tbody tr td:first-child {
     font-weight: 700;
     color: var(--secondary-color);
 }
+
 .meta-info span {
     font-size: 18px;
     font-weight: 400;
 }
+
 .meta-info1 span {
     color: var(--p-color);
     margin-left: 3rem;
@@ -872,3 +897,164 @@ table tbody tr td:first-child {
 }
 
 /* ========================Contact Us-section=====================  */
+
+.contacts {
+    margin: 0 auto;
+    padding: 80px 0 70px;
+}
+
+.contacts-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.contact-info {
+    position: relative;
+    width: 100%;
+}
+
+.contact-info img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.contact-address {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+    height: 55%;
+    width: 40%;
+}
+
+.contact-address p {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 1rem;
+}
+
+.contact-address a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    margin-bottom: 0.5rem;
+}
+
+.contact-address button {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 15px 10px;
+    border: none;
+    outline: none;
+    width: 100%;
+    border-radius: 0 0 20px 20px;
+    background-color: var(--custom-btn-bg-hover-color);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.contact-address button:hover {
+    background-color: var(--custom-btn-bg-color);
+}
+
+.cont h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.cont {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+}
+
+form {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.field {
+    position: relative;
+    width: 100%;
+}
+
+.field input {
+    width: 100%;
+    padding: 20px 20px;
+    border: 1px solid #dee2e6;
+    border-radius: 20px;
+    font-size: 15px;
+}
+
+.massage-field {
+    width: 100%;
+    padding: 20px 20px;
+    border: 1px solid #dee2e6;
+    border-radius: 20px;
+    font-size: 15px;
+    height: 120px;
+    margin-bottom: 1rem;
+}
+
+.field label {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    font-size: 15px;
+    color: rgb(70, 67, 67);
+    pointer-events: none;
+    transition: 0.2s ease;
+    background-color: white;
+    padding: 0 5px;
+}
+
+.massage-field+label {
+    top: 20%;
+}
+
+.field input:focus,
+.field textarea:focus {
+    border: 1px solid var(--p-color);
+    outline: none;
+}
+
+.field input:focus+label,
+.field input:not(:placeholder-shown)+label,
+.field textarea:focus+label,
+.field textarea:not(:placeholder-shown)+label {
+    top: -2px;
+    font-size: 12px;
+    color: var(--p-color);
+}
+
+.cont button {
+    padding: 15px 10px;
+    background-color: var(--custom-btn-bg-color);
+    color: white;
+    border: none;
+    border-radius: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.cont button:hover {
+    background-color: var(--custom-btn-bg-hover-color);
+}

@@ -29,7 +29,7 @@
                     <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
                     <li class="nav-item"><a href="#membership" class="nav-link">Membership</a></li>
                     <li class="nav-item"><a href="#events" class="nav-link">Events</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Contact Us</a></li>
+                    <li class="nav-item"><a href="#contacts" class="nav-link">Contact Us</a></li>
                     <li class="nav-item dropdown-box"><a href="" class="nav-link ">Pages <i
                                 class="fa-solid fa-chevron-up  arrow-link"></i></a>
                         <ul class="dropdown-menu">
@@ -206,7 +206,7 @@
             </div>
         </div>
     </section>
-
+    <!-- membership-section -->
     <section class="membership" id="membership">
         <div class="container">
             <h2 class="memership-title">Membership at Tiya</h2>
@@ -273,13 +273,22 @@
 
                 <div class="join-member">
                     <h2 class="join-member-title">Please join us!</h2>
-                    <div class="member-info">
+                    <form action="" class="member-info">
                         <h2>Become a member</h2>
-                        <input type="text" placeholder="Full Name">
-                        <input type="email" placeholder="Email address">
-                        <input type="text" placeholder="Comments">
+                        <div class="member-field">
+                            <input type="text" placeholder="">
+                            <label for="name">Name</label>
+                        </div>
+                        <div class="member-field">
+                            <input type="email" placeholder="">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="member-field">
+                            <textarea class="member-comment" name="Comments" id="" required placeholder=""></textarea>
+                            <label for="comment">comment</label>
+                        </div>
                         <button type="submit">submit</button>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -328,7 +337,7 @@
                         <img src="images/Upcoming images/image-2.jpg" alt="">
                         <a href=""><i class="fa-solid fa-link"></i></a>
                     </div>
-                    <div class="event-details">
+                    <div class="event-details event-details2">
                         <h2>Group tournament activities</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do <br>
                             eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -344,6 +353,42 @@
                             </div>
                             <a href=""><button type="submit">Buy Ticket</button></a>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us-section -->
+    <section class="contacts" id="contacts">
+        <div class="container">
+            <div class="contacts-content">
+                <div class="cont">
+                    <h2>Contact Tiya</h2>
+                    <form action="">
+                        <div class="field">
+                            <input type="text" id="name" required placeholder=" ">
+                            <label for="name">Full Name</label>
+                        </div>
+                        <div class="field">
+                            <input type="email" id="email" required placeholder=" ">
+                            <label for="email">Email address</label>
+                        </div>
+                    </form>
+                    <div class="field">
+                        <textarea class="massage-field" id="message" required placeholder=" "></textarea>
+                        <label for="message">Message</label>
+                    </div>
+                    <button type="submit">Submit Form</button>
+                </div>
+
+                <div class="contact-info">
+                    <img src="images/Contact Us-images/WorldMap.svg" alt="">
+                    <div class="contact-address">
+                        <p>London, United Kingdom</p>
+                        <a href="">(020) 010-020-0340</a>
+                        <a href="">info@company.com</a>
+                        <button>Directions</button>
                     </div>
                 </div>
             </div>
