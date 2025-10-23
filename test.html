@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slide Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #333;
+      color: white;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar button {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    /* Login panel */
+    .login-panel {
+      position: fixed;
+      top: 0;
+      right: -400px; /* مخفي برا الشاشة */
+      width: 400px;
+      height: 100%;
+      background-color: white;
+      box-shadow: -2px 0 8px rgba(0,0,0,0.2);
+      transition: right 0.4s ease;
+      padding: 20px;
+      z-index: 999;
+    }
+
+    .login-panel.active {
+      right: 0; /* تطلع من الجمب */
+    }
+
+    .login-panel h2 {
+      margin-top: 0;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 24px;
+      cursor: pointer;
+      color: #333;
+    }
+
+    /* خلفية داكنة عند الفتح */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.4);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease;
+      z-index: 998;
+    }
+
+    .overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* Form */
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input {
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <h2>My Website</h2>
+    <button id="loginBtn">Login</button>
+  </div>
+
+  <div class="overlay" id="overlay"></div>
+
+  <div class="login-panel" id="loginPanel">
+    <span class="close-btn" id="closeBtn">&times;</span>
+    <h2>Login</h2>
+    <form>
+      <input type="text" placeholder="Username" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <script>
+    const loginBtn = document.getElementById('loginBtn');
+    const closeBtn = document.getElementById('closeBtn');
+    const loginPanel = document.getElementById('loginPanel');
+    const overlay = document.getElementById('overlay');
+
+    loginBtn.addEventListener('click', () => {
+      loginPanel.classList.add('active');
+      overlay.classList.add('active');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      loginPanel.classList.remove('active');
+      overlay.classList.remove('active');
+    });
+
+    overlay.addEventListener('click', () => {
+      loginPanel.classList.remove('active');
+      overlay.classList.remove('active');
+    });
+  </script>
+
+</body>
+</html>

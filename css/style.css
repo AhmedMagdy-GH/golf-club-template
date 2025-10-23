@@ -96,12 +96,14 @@ body {
 }
 
 .logo-title {
+    text-decoration: none;
     font-size: 24px;
     font-weight: bold;
     color: white;
 }
 
 .logo-subtitle {
+    text-decoration: none;
     font-size: 10px;
     font-weight: bold;
     color: white;
@@ -807,7 +809,7 @@ table tbody tr td:first-child {
     transform: scale(1.2);
 }
 
-.event-image a {
+.event-image .upcoming-event-image-link {
     display: inline-block;
     text-decoration: none;
     color: white;
@@ -822,19 +824,19 @@ table tbody tr td:first-child {
     transform: translate(-50%, -50%);
     text-align: center;
     border-radius: 50%;
-    transition: all 0.3s;
+    transition: all 0.5s;
     opacity: 0;
 }
 
-.event-image a i {
+.event-image .upcoming-event-image-link i {
     transform: rotate(40deg);
 }
 
-.event-image:hover a {
+.event-image:hover .upcoming-event-image-link {
     opacity: 1;
 }
 
-.event-image a:hover {
+.event-image .upcoming-event-image-link:hover {
     background-color: var(--custom-btn-bg-hover-color);
 }
 
@@ -1109,6 +1111,7 @@ form {
     align-items: flex-start;
     gap: 10px;
     padding: 10px;
+    cursor: pointer;
 }
 
 .footer-logo-icon img {
@@ -1122,11 +1125,15 @@ form {
 }
 
 .footer-logo-title {
+    text-decoration: none;
+    color: black;
     font-size: 24px;
     font-weight: bold;
 }
 
 .footer-logo-subtitle {
+    text-decoration: none;
+    color: black;
     font-size: 10px;
     font-weight: bold;
 }
@@ -1293,7 +1300,7 @@ form {
 }
 
 
-.ev-image > a {
+.ev-image > .lastest-ev-image-link {
     display: inline-block;
     text-decoration: none;
     color: white;
@@ -1308,19 +1315,19 @@ form {
     transform: translate(-50%, -50%);
     text-align: center;
     border-radius: 50%;
-    transition: all 0.3s;
+    transition: all 0.5s;
     opacity: 0;
 }
 
-.ev-image > a i {
+.ev-image > .lastest-ev-image-link i {
     transform: rotate(40deg);
 }
 
-.ev-image:hover > a {
+.ev-image:hover > .lastest-ev-image-link {
     opacity: 1;
 }
 
-.ev-image > a:hover  {
+.ev-image > .lastest-ev-image-link:hover  {
     background-color: var(--custom-btn-bg-hover-color);
 }
 
@@ -1417,3 +1424,112 @@ form {
     font-size: 18px;
     font-weight: 400;
 }
+
+/*=============== event-details-page==================*/
+
+.event-details {
+    padding: 40px 0;
+    margin: 0 auto;
+}
+
+.event-details-content {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.event-details-content-h2{
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: black;
+    padding-top: 80px;
+}
+
+.event-details-con {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.event-details-image {
+    border-radius: 20px;
+    margin: 0 auto;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+.event-details-image img {
+    width:100%;
+    border-radius: 20px;
+    object-fit: cover;
+    transition: all 0.3s;
+}
+
+.event-details-image:hover img {
+    transform: scale(1.2);
+}
+
+.event-details-pf {
+    margin-left: 3rem;
+}
+
+.event-details-pf > h2 {
+    font-size: 28px;
+    font-weight: 500;
+    color: black;
+    margin: 1rem 0;
+}
+
+.event-details-pf > p {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--p-color);
+    white-space: pre-line;
+}
+
+.event-details-box {
+    width: 80%;
+    background-color: var(--section-bg-color);
+    border-radius: 20px;
+    padding: 50px 25px;
+    margin: 3rem auto 0;
+}
+
+.event-details-box > p {
+    font-size: 24px;
+    font-weight: 500;
+    color: black;
+}
+
+.event-details-box-co {
+    display: flex;
+    gap: 4rem;
+    margin-top: 1rem;
+}
+
+.event-details-box-date {
+    display: flex;
+    flex-direction: column;
+}
+
+.event-details-box-date  p {
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+.event-details-box-date span{
+    display: block;
+    color: var(--p-color);
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.event-details-content-contact-info {
+    margin: 3rem 0;
+}
+
+
+.event-details-content-contact-info  .contact-address{
+    height: 180px;
+}
+
+/*=====================Login-page======================*/
