@@ -64,7 +64,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000;
+    z-index: 100;
 }
 
 .nav-container {
@@ -1300,7 +1300,7 @@ form {
 }
 
 
-.ev-image > .lastest-ev-image-link {
+.ev-image>.lastest-ev-image-link {
     display: inline-block;
     text-decoration: none;
     color: white;
@@ -1319,15 +1319,15 @@ form {
     opacity: 0;
 }
 
-.ev-image > .lastest-ev-image-link i {
+.ev-image>.lastest-ev-image-link i {
     transform: rotate(40deg);
 }
 
-.ev-image:hover > .lastest-ev-image-link {
+.ev-image:hover>.lastest-ev-image-link {
     opacity: 1;
 }
 
-.ev-image > .lastest-ev-image-link:hover  {
+.ev-image>.lastest-ev-image-link:hover {
     background-color: var(--custom-btn-bg-hover-color);
 }
 
@@ -1396,15 +1396,15 @@ form {
     color: var(--custom-btn-bg-color);
 }
 
-.ev-sub > p {
+.ev-sub>p {
     font-size: 18px;
     font-weight: 400;
     color: var(--p-color);
-    border-bottom: 1px solid  #dee2e6;
+    border-bottom: 1px solid #dee2e6;
     padding-bottom: 1rem;
 }
 
-.ev-meta{
+.ev-meta {
     margin-top: 1rem;
 }
 
@@ -1415,9 +1415,10 @@ form {
     margin-right: 3rem;
 
 }
+
 .ev-meta .st2 {
     margin-right: 4rem;
-} 
+}
 
 .ev-meta p {
     color: var(--p-color);
@@ -1437,7 +1438,7 @@ form {
     margin: 0 auto;
 }
 
-.event-details-content-h2{
+.event-details-content-h2 {
     font-size: 36px;
     font-weight: 700;
     margin-bottom: 3rem;
@@ -1458,7 +1459,7 @@ form {
 }
 
 .event-details-image img {
-    width:100%;
+    width: 100%;
     border-radius: 20px;
     object-fit: cover;
     transition: all 0.3s;
@@ -1472,14 +1473,14 @@ form {
     margin-left: 3rem;
 }
 
-.event-details-pf > h2 {
+.event-details-pf>h2 {
     font-size: 28px;
     font-weight: 500;
     color: black;
     margin: 1rem 0;
 }
 
-.event-details-pf > p {
+.event-details-pf>p {
     font-size: 18px;
     font-weight: 400;
     color: var(--p-color);
@@ -1494,7 +1495,7 @@ form {
     margin: 3rem auto 0;
 }
 
-.event-details-box > p {
+.event-details-box>p {
     font-size: 24px;
     font-weight: 500;
     color: black;
@@ -1511,12 +1512,12 @@ form {
     flex-direction: column;
 }
 
-.event-details-box-date  p {
+.event-details-box-date p {
     color: var(--secondary-color);
     font-weight: 700;
 }
 
-.event-details-box-date span{
+.event-details-box-date span {
     display: block;
     color: var(--p-color);
     font-size: 18px;
@@ -1528,8 +1529,218 @@ form {
 }
 
 
-.event-details-content-contact-info  .contact-address{
+.event-details-content-contact-info .contact-address {
     height: 180px;
 }
 
-/*=====================Login-page======================*/
+/*======================Login-Panel======================*/
+
+.login-panel {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 400px;
+    height: 100vh;
+    background-color: var(--primary-color);
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
+    transition: right 0.4s ease;
+    z-index: 999;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-panel.active {
+    right: 0;
+}
+
+.login-panel-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 998;
+}
+
+.login-panel-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+.login-content h2 {
+    padding: 16px;
+    color: black;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: -1;
+    margin-bottom: 1rem;
+}
+
+.close-btn {
+    position: absolute;
+    display: inline-block;
+    top: 50px;
+    right: 40px;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    transition: color 0.3s ease;
+    transition: transform 0.4s ease;
+}
+
+.close-btn:hover {
+    transform: rotate(180deg);
+    color: black;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.login-field {
+    position: relative;
+}
+
+.login-field input {
+    padding: 15px;
+    width: 100%;
+    border-radius: 40px;
+    border: none;
+    outline: none;
+    display: block;
+    font-size: 16px;
+    color: var(--p-color);
+    transition: all 0.1s;
+}
+
+.login-field input:hover,
+.login-field input:focus {
+    outline: 2px solid black;
+}
+
+.login-field input[placeholder] {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.login-field label {
+    font-size: 16px;
+    font-weight: 400;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    color: #212529;
+}
+
+.login-checkbox {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.login-checkbox input[type="checkbox"] {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #dee2e6;
+    background-color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+}
+
+.login-checkbox input[type="checkbox"]:focus {
+    box-shadow: 0 0 1px 4px #0d6dfd65;
+}
+
+.login-checkbox input[type="checkbox"]:checked {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.login-checkbox input[type="checkbox"]:checked::after {
+    content: "✔";
+    color: white;
+    position: absolute;
+    top: -2px;
+    left: 2px;
+    font-size: 10px;
+}
+
+.login-checkbox label {
+    color: #212529;
+}
+
+.login-links1 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-links1 button {
+    background: var(--custom-btn-bg-color);
+    padding: 12px 40px;
+    border: none;
+    border-radius: 100px;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.3s;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.login-links1 button:hover {
+    background-color: var(--custom-btn-bg-hover-color);
+}
+
+.login-links1 a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    transition: all 0.3s;
+}
+
+
+.login-links1 a:last-of-type:hover {
+    color: var(--custom-btn-bg-color);
+}
+
+.login-link2 {
+    position: absolute;
+    bottom: 100px;
+    left: 60px;
+    display: flex;
+    gap: 1rem;
+}
+
+.login-link2 p {
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.login-link2 a {
+    text-decoration: none;
+    display: inline-block;
+    color: var(--secondary-color);
+    font-size: 18px;
+    transition: all 0.3s;
+}
+
+.login-link2 a:hover {
+    color: var(--custom-btn-bg-color);
+}
+
+.login-panel .wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}

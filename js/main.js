@@ -89,3 +89,25 @@ if (!isDropdownPage) {
         });
     });
 }
+
+/* =========================login-panel========================*/
+
+const loginBtn = document.getElementById('login-btn');
+const closeBtn = document.getElementById('close-btn');
+const loginPanel = document.getElementById('login-panel');
+const overlay = document.getElementById('login-panel-overlay');
+
+// لما أضغط على زرار Login في الناف
+loginBtn.addEventListener('click', () => {
+    loginPanel.classList.add('active');
+    overlay.classList.add('active');
+});
+
+// لما أضغط على X أو برة البانل
+closeBtn.addEventListener('click', closeLoginPanel);
+overlay.addEventListener('click', closeLoginPanel);
+
+function closeLoginPanel() {
+    loginPanel.classList.remove('active');
+    overlay.classList.remove('active');
+}
