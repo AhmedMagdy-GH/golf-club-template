@@ -111,3 +111,31 @@ function closeLoginPanel() {
     loginPanel.classList.remove('active');
     overlay.classList.remove('active');
 }
+
+
+
+
+
+
+
+// اختر الهامبرجر والمينيو
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
+
+// تحقق إن العناصر موجودة
+if (hamburger && navMenu) {
+    // عند الضغط على الهامبرجر
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active'); // يحول الهامبرجر لـ X
+        navMenu.classList.toggle('active');   // يفتح/يقفل المينيو
+    });
+
+    // إغلاق المينيو عند الضغط على أي رابط
+    const navLinks = document.querySelectorAll('.nav-item');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active'); // يرجع الهامبرجر للوضع الطبيعي
+            navMenu.classList.remove('active');   // يغلق المينيو
+        });
+    });
+}
