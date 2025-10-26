@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="CSS/all.css">
     <link rel="icon" href="images/logo/logo.png">
+    <link rel="stylesheet" href="css/nav-style.css">
 </head>
 
 <body>
@@ -17,34 +18,46 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <a class="logo-icon" href="index.html"><img src="images/logo/logo.png" alt="logo"></a>
-                <div class="logo-text">
-                    <a href="index.html" class="logo-title">Tiya</a>
-                    <a href="index.html" class="logo-subtitle">GOLF CLUB</a>
+                <a class="logo-icon" href="index.html">
+                    <img src="images/logo/logo.png" alt="logo">
+                    <span>
+                        Tiya
+                        <small>GOLF CLUB</small>
+                    </span>
+                </a>
+            </div>
+
+            <div class="mobile-sec">
+                <div class="mobile-login-btn">
+                    <a href="#" class="login-btn" id="login-btn">MemberLogin</a>
+                </div>
+
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
-            <div class="nav-menu">
+
+
+            <div class="nav-list">
                 <ul class="nav-menu">
                     <li class="nav-item"><a href="#hero" class="nav-link">Home</a></li>
                     <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
                     <li class="nav-item"><a href="#membership" class="nav-link">Membership</a></li>
                     <li class="nav-item"><a href="#events" class="nav-link">Events</a></li>
                     <li class="nav-item"><a href="#contacts" class="nav-link">Contact Us</a></li>
-                    <li class="nav-item dropdown-box"><a href="#" class="nav-link">Pages <i
+                    <li class="nav-item dropdown"><a href="#" class="nav-link">Pages <i
                                 class="fa-solid fa-chevron-up  arrow-link"></i></a>
                         <ul class="dropdown-menu">
                             <li><a href="event-listing.html" class="nav-link ">Event listing</a></li>
                             <li><a href="event-details.html" class="nav-link ">Event Details</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><button id="login-btn"><a href="#" class="login-btn">Member Login</a></button>
-                    </li>
                 </ul>
-            </div>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+                <div class="login-menu-btn">
+                    <a href="#" class="login-btn" id="login-btn">MemberLogin</a>
+                </div>
             </div>
         </div>
     </nav>
