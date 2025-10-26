@@ -61,6 +61,13 @@ body {
     top: 0;
     z-index: 100;
 }
+.navbar.transparent {
+    background-color: transparent;
+}
+
+.navbar.scrolled {
+    background-color: var(--secondary-color);
+}
 
 .nav-container {
     max-width: 1400px;
@@ -349,17 +356,28 @@ nav a.active {
     .nav-container {
         max-width: 540px
     }
+
+    .navbar {
+        background-color: var(--secondary-color);
+    }
 }
 
 @media (min-width: 768px) {
     .nav-container {
         max-width: 720px
     }
+
+    .navbar {
+        background-color: var(--secondary-color);
+    }
 }
 
 @media (min-width: 992px) {
     .nav-container {
         max-width: 960px
+    }
+    .navbar {
+        background-color: var(--secondary-color);
     }
 }
 

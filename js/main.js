@@ -113,7 +113,7 @@ function closeLoginPanel() {
     overlay.classList.remove('active');
 }
 
-/*=================== hamburger animation========================*/ 
+/*=================== hamburger animation========================*/
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
@@ -123,7 +123,7 @@ if (hamburger && navMenu) {
         navMenu.classList.toggle('active');
     });
 
-    const navLinks = document.querySelectorAll('.nav-link'); 
+    const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             hamburger.classList.remove('active');
@@ -132,3 +132,38 @@ if (hamburger && navMenu) {
     });
 }
 
+/////////////////////////////////
+
+document.addEventListener("DOMContentLoaded", () => {
+    const navbar = document.querySelector(".navbar");
+    const upperWave = document.querySelector(".upper-wave");
+
+    if (!navbar || !upperWave) return;
+
+    function handleScroll() {
+        const windowWidth = window.innerWidth;
+        const waveRect = upperWave.getBoundingClientRect();
+        const waveBottom = waveRect.bottom + window.scrollY;
+        const navbarHeight = navbar.offsetHeight;
+
+        // لو الشاشة أصغر من 991px، خلي الناف بار لونه طبيعي
+        if (windowWidth < 992) {
+            navbar.classList.remove("transparent");
+            navbar.classList.remove("scrolled");
+            return;
+        }
+
+        // لو الناف فوق الموجة أو جزء منها ظاهر
+        if (window.scrollY + navbarHeight < waveBottom) {
+            navbar.classList.add("transparent");
+            navbar.classList.remove("scrolled");
+        } else {
+            navbar.classList.remove("transparent");
+            navbar.classList.add("scrolled");
+        }
+    }
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleScroll);
+});
