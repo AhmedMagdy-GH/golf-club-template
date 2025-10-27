@@ -14,21 +14,22 @@ setInterval(() => {
 
 
 //scroll animation =====================================
+
 document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', function (e) {
         e.preventDefault();
 
         const target = document.querySelector(this.getAttribute('href'));
-        const targetPosition = target.offsetTop - 100; // 🟡 هنا طرحت 100px
+        const targetPosition = target.offsetTop - 100; 
         const startPosition = window.scrollY;
         const distance = targetPosition - startPosition;
-        const duration = 300; // تقدر تزود الوقت لو عايز الحركة أبطأ
+        const duration = 300;
         let start = null;
 
         function easeInOut(t) {
             return t < 0.5
-                ? t  // 🌀 حركة سلسة في البداية
-                : 1 - Math.pow(-2 * t + 2, 2) / 2; // 🌀 بطيئة في النهاية
+                ? t  
+                : 1 - Math.pow(-2 * t + 2, 2) / 2;
         }
 
         function animation(currentTime) {
@@ -47,19 +48,17 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 
 //================== avtive links and pages ========================
 const navLinks = document.querySelectorAll('.nav-link');
-const currentPage = window.location.pathname.split("/").pop(); // اسم الصفحة الحالية
+const currentPage = window.location.pathname.split("/").pop(); 
 
-// ✅ أولاً: فعل اللينك الخاص بالصفحة الحالية (لو هي صفحة من dropdown)
 let isDropdownPage = false;
 navLinks.forEach(link => {
     const linkHref = link.getAttribute('href');
     if (linkHref === currentPage) {
         link.classList.add('active');
-        isDropdownPage = true; // نعلم إننا في صفحة من dropdown
+        isDropdownPage = true; 
     }
 });
 
-// ✅ ثانياً: عند الضغط على أي لينك
 navLinks.forEach(link => {
     link.addEventListener('click', function () {
         navLinks.forEach(l => l.classList.remove('active'));
@@ -67,7 +66,6 @@ navLinks.forEach(link => {
     });
 });
 
-// ✅ ثالثاً: لو إحنا في index.html فقط نفعل تأثير السكاشن
 if (!isDropdownPage) {
     window.addEventListener('scroll', () => {
         let current = '';
@@ -99,7 +97,7 @@ const overlay = document.getElementById('login-panel-overlay');
 
 loginBtns.forEach(btn => {
     btn.addEventListener('click', e => {
-        e.preventDefault(); // يمنع القفز لأعلى الصفحة
+        e.preventDefault(); 
         loginPanel.classList.add('active');
         overlay.classList.add('active');
     });
@@ -134,36 +132,34 @@ if (hamburger && navMenu) {
 
 /////////////////////////////////
 
-document.addEventListener("DOMContentLoaded", () => {
-    const navbar = document.querySelector(".navbar");
-    const upperWave = document.querySelector(".upper-wave");
+// document.addEventListener("DOMContentLoaded", () => {
+//     const navbar = document.querySelector(".navbar");
+//     const upperWave = document.querySelector(".upper-wave");
 
-    if (!navbar || !upperWave) return;
+//     if (!navbar || !upperWave) return;
 
-    function handleScroll() {
-        const windowWidth = window.innerWidth;
-        const waveRect = upperWave.getBoundingClientRect();
-        const waveBottom = waveRect.bottom + window.scrollY;
-        const navbarHeight = navbar.offsetHeight;
+//     function handleScroll() {
+//         const windowWidth = window.innerWidth;
+//         const waveRect = upperWave.getBoundingClientRect();
+//         const waveBottom = waveRect.bottom + window.scrollY;
+//         const navbarHeight = navbar.offsetHeight;
 
-        // لو الشاشة أصغر من 991px، خلي الناف بار لونه طبيعي
-        if (windowWidth < 992) {
-            navbar.classList.remove("transparent");
-            navbar.classList.remove("scrolled");
-            return;
-        }
+//         if (windowWidth < 992) {
+//             navbar.classList.remove("transparent");
+//             navbar.classList.remove("scrolled");
+//             return;
+//         }
 
-        // لو الناف فوق الموجة أو جزء منها ظاهر
-        if (window.scrollY + navbarHeight < waveBottom) {
-            navbar.classList.add("transparent");
-            navbar.classList.remove("scrolled");
-        } else {
-            navbar.classList.remove("transparent");
-            navbar.classList.add("scrolled");
-        }
-    }
+//         if (window.scrollY + navbarHeight < waveBottom) {
+//             navbar.classList.add("transparent");
+//             navbar.classList.remove("scrolled");
+//         } else {
+//             navbar.classList.remove("transparent");
+//             navbar.classList.add("scrolled");
+//         }
+//     }
 
-    handleScroll();
-    window.addEventListener("scroll", handleScroll);
-    window.addEventListener("resize", handleScroll);
-});
+//     handleScroll();
+//     window.addEventListener("scroll", handleScroll);
+//     window.addEventListener("resize", handleScroll);
+// });

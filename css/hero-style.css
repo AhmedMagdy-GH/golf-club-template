@@ -73,7 +73,6 @@ body {
 .hero-container {
     max-width: 1320px;
     margin: 0 auto;
-    padding-inline: clamp(1rem, 5vw, 3rem);
 }
 
 .hero .upper-wave svg {
@@ -104,6 +103,8 @@ body {
     position: relative;
     max-width: 100%;
     display: grid;
+    justify-content: center;
+    align-items: center;
     grid-template-columns: repeat(2, 1fr);
     padding: 0 10px;
     z-index: 10;
@@ -210,12 +211,20 @@ body {
 }
 
 .hero-video {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
     border-radius: 20px;
-    max-width: 100%;
-    padding: 0 10px;
 }
 
 .hero-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110%;
+    height: 110%;
+    transform: translate(-5%, -5%);
+    border: 0;
     border-radius: 20px;
 }
 
@@ -244,15 +253,6 @@ body {
         align-items: center;
     }
 
-    .white-text {
-        white-space: nowrap;
-    }
-
-    .hero-video iframe {
-        transform: scale(0.9);
-        transform-origin: center;
-    }
-
 }
 
 @media (min-width: 1200px) {
@@ -268,7 +268,7 @@ body {
 
 }
 
-@media(max-width:991px) {
+@media(max-width:992px) {
 
     .hero {
         height: 105vh;
@@ -287,6 +287,7 @@ body {
     }
 
     .hero-content {
+        margin: 0 auto;
         position: relative;
         top: -80px;
         max-width: 100%;
@@ -310,6 +311,7 @@ body {
 
     .white-text {
         font-size: 28px;
+        white-space: nowrap;
     }
 
     .white-text2 {
@@ -323,14 +325,22 @@ body {
         bottom: -4px;
     }
 
-    .hero-video iframe {
-        width: 30%;
-        height: 350px;
+    .hero-video {
+        position: relative;
+        width: 100%;
+        padding-top: 56.25%;
+        border-radius: 20px;
     }
 
     .hero-video iframe {
-        width: 100%;
-        height: 350px;
+        position: absolute;
+        top: 0;
+        left: 5%;
+        width:100%;
+        height: 100%;
+        transform: translate(-5%, -5%);
+        border: 0;
+        border-radius: 20px;
     }
 }
 
@@ -339,29 +349,41 @@ body {
         width: 100vw;
     }
 
-    .hero-video iframe {
+    .hero-content {
+        position: relative;
+        top: -80px;
         width: 100%;
-        height: 400px;
+        display: grid;
+        grid-template-columns: 3fr;
+        padding: 0 10px;
+        z-index: 10;
+        justify-content: center;
+        align-items: center;
     }
+
 
     .hero-content {
         transform: scale(0.9);
         transition: transform 0.3s ease;
+        margin-right: 5rem;
     }
 }
 
 @media(max-width: 576px) {
+
+    .hero-container {
+        max-width: 100%;
+        margin: 0;
+
+    }
+
     .hero-content {
-        transform: scale(0.85);
-    }
-
-    .hero-video iframe {
         width: 100%;
-        height: 350px;
-    }
-
-    .hero-video iframe {
-        width: 100%;
-        height: 350px;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0 20px;
+        align-items: flex-start;
+        transform: scale(1.01);
     }
 }
