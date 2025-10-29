@@ -353,6 +353,9 @@ nav a.active {
 
 
 
+
+/*======================Responsive-design=======================*/
+
 @media (min-width: 576px) {
     .nav-container {
         max-width: 540px
@@ -393,8 +396,6 @@ nav a.active {
         max-width: 1320px
     }
 }
-
-/*======================Responsive-design=======================*/
 
 @media(max-width:991px) {
     .mobile-sec {
