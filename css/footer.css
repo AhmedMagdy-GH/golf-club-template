@@ -1,0 +1,246 @@
+:root {
+    --white-color: #ffffff;
+    --primary-color: #81B29A;
+    --secondary-color: #3D405B;
+    --section-bg-color: #F4F1DE;
+    --custom-btn-bg-color: #F2CC8F;
+    --custom-btn-bg-hover-color: #E07A5F;
+    --dark-color: #000000;
+    --p-color: #717275;
+    --link-hover-color: #F2CC8F;
+    --body-font-family: 'DM Sans', sans-serif;
+    --h1-font-size: 42px;
+    --h2-font-size: 36px;
+    --h3-font-size: 28px;
+    --h4-font-size: 24px;
+    --h5-font-size: 22px;
+    --h6-font-size: 20px;
+    --p-font-size: 18px;
+    --menu-font-size: 16px;
+    --btn-font-size: 14px;
+    --border-radius-large: 100px;
+    --border-radius-medium: 20px;
+    --border-radius-small: 10px;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+}
+
+
+::selection {
+    background-color: var(--primary-color);
+}
+
+/* Reset and Base Style */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    scroll-padding-top: 100px;
+}
+
+body {
+    background-color: white;
+    font-family: var(--body-font-family);
+}
+
+.footer-container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/*========================= footer-section=========================*/
+
+.footer {
+    position: relative;
+}
+
+svg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+}
+
+.footer-wave {
+    z-index: 0;
+}
+
+.footer-icons-dates {
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    padding-bottom: 200px;
+}
+
+.footer-sec2 {
+    display: flex;
+    gap: 5rem;
+}
+
+.footer-sec2 .footer-icons {
+    margin: auto 0;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.footer-logo-icon img {
+    width: 48px;
+    height: auto;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-logo-title {
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.footer-logo-subtitle {
+    text-decoration: none;
+    color: black;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.footer-dates h3 {
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--secondary-color);
+    letter-spacing: -1;
+    margin-bottom: 1rem;
+}
+
+.footer-date {
+    display: flex;
+    /* justify-content: space-between; */
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--p-color);
+    margin-bottom: 1rem;
+}
+
+.footer-date+p {
+    margin-right: 2rem;
+}
+
+.footer-dates>p {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--p-color);
+}
+
+.footer-date1 {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.footer-date2 {
+    margin-bottom: 3rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.footer-links a {
+    display: inline-block;
+    text-decoration: none;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    border-radius: 100px;
+    background-color: var(--secondary-color);
+    color: white;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.footer-links a i {
+    transform: translate(-1px);
+}
+
+.footer-links a:hover {
+    background-color: var(--primary-color);
+}
+
+.footer-icons p {
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.footer-icons p span {
+    color: var(--p-color);
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.footer-icons p span:hover {
+    color: var(--link-hover-color);
+}
+
+/*======================Responsive-design=======================*/
+
+@media(max-width:991px){
+    .footer-icons-dates {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .footer-sec2 {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 576px) {
+    .footer-container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .footer-container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .footer-container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .footer-container {
+        max-width: 1140px;
+    }
+
+}
+
+@media (min-width: 1400px) {
+    .footer-container {
+        max-width: 1320px;
+    }
+}
