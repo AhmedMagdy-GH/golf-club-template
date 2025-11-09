@@ -72,7 +72,11 @@ body {
 }
 
 .newletter-under-wave {
-    position: relative;
+    padding-top: 190px;
+}
+
+.newletter-wave2 {
+    position: absolute;
     bottom: -1px;
     transform: rotate(180deg);
 }
@@ -162,6 +166,17 @@ body {
         max-width: 600px;
         width: 100%;
         margin: 0;
+    }
+
+    .newletter-under-wave {
+        padding-top: 90px;
+    }
+
+}
+
+@media(max-width:991px) {
+    .newletter-under-wave {
+        padding-top: 140px;
     }
 
 }
