@@ -1,4 +1,4 @@
-// text animation====================================
+/* ============================text animation================================*/
 
 const words = document.querySelectorAll('.hero-text-animation span');
 let currentIndex = 0;
@@ -13,7 +13,7 @@ setInterval(() => {
 }, 2500);
 
 
-//scroll animation =====================================
+/*============================scroll animation =================================*/
 
 document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', function (e) {
@@ -46,7 +46,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     });
 });
 
-//================== avtive links and pages ========================
+/*================== avtive links and pages ======================*/
 const navLinks = document.querySelectorAll('.nav-link');
 const currentPage = window.location.pathname.split("/").pop(); 
 
@@ -88,7 +88,7 @@ if (!isDropdownPage) {
     });
 }
 
-/* =========================login-panel========================*/
+/* =====================login-panel========================*/
 
 const loginBtns = document.querySelectorAll('.login-btn');
 const closeBtn = document.getElementById('close-btn');
@@ -130,7 +130,7 @@ if (hamburger && navMenu) {
     });
 }
 
-/////////////////////////////////
+/*==========================Transparent navbar==================================*/ 
 
 document.addEventListener("DOMContentLoaded", () => {
     const navbar = document.querySelector(".navbar");
