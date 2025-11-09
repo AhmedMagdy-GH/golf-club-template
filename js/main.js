@@ -20,7 +20,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
         e.preventDefault();
 
         const target = document.querySelector(this.getAttribute('href'));
-        const targetPosition = target.offsetTop - 100; 
+        const targetPosition = target.offsetTop - 100;
         const startPosition = window.scrollY;
         const distance = targetPosition - startPosition;
         const duration = 300;
@@ -28,7 +28,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 
         function easeInOut(t) {
             return t < 0.5
-                ? t  
+                ? t
                 : 1 - Math.pow(-2 * t + 2, 2) / 2;
         }
 
@@ -44,18 +44,21 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 
         requestAnimationFrame(animation);
     });
+
+    document.body.style.overflow = 'hidden';
+
 });
 
 /*================== avtive links and pages ======================*/
 const navLinks = document.querySelectorAll('.nav-link');
-const currentPage = window.location.pathname.split("/").pop(); 
+const currentPage = window.location.pathname.split("/").pop();
 
 let isDropdownPage = false;
 navLinks.forEach(link => {
     const linkHref = link.getAttribute('href');
     if (linkHref === currentPage) {
         link.classList.add('active');
-        isDropdownPage = true; 
+        isDropdownPage = true;
     }
 });
 
@@ -97,7 +100,7 @@ const overlay = document.getElementById('login-panel-overlay');
 
 loginBtns.forEach(btn => {
     btn.addEventListener('click', e => {
-        e.preventDefault(); 
+        e.preventDefault();
         loginPanel.classList.add('active');
         overlay.classList.add('active');
     });
@@ -130,7 +133,7 @@ if (hamburger && navMenu) {
     });
 }
 
-/*==========================Transparent navbar==================================*/ 
+/*==========================Transparent navbar==================================*/
 
 document.addEventListener("DOMContentLoaded", () => {
     const navbar = document.querySelector(".navbar");
