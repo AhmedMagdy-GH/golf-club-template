@@ -89,6 +89,7 @@ body {
     position: absolute;
     bottom: -1px;
     left: 0;
+    right: 0;
     width: 100%;
 }
 
@@ -370,7 +371,6 @@ body {
     .hero-container {
         max-width: 100%;
         margin: 0;
-
     }
 
     .hero-content {
@@ -382,4 +382,13 @@ body {
         align-items: flex-start;
         transform: scale(1.01);
     }
+
+    .hero .under-wave {
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
+
 }

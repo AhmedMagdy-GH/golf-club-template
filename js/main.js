@@ -132,34 +132,34 @@ if (hamburger && navMenu) {
 
 /////////////////////////////////
 
-// document.addEventListener("DOMContentLoaded", () => {
-//     const navbar = document.querySelector(".navbar");
-//     const upperWave = document.querySelector(".upper-wave");
+document.addEventListener("DOMContentLoaded", () => {
+    const navbar = document.querySelector(".navbar");
+    const upperWave = document.querySelector(".upper-wave");
 
-//     if (!navbar || !upperWave) return;
+    if (!navbar || !upperWave) return;
 
-//     function handleScroll() {
-//         const windowWidth = window.innerWidth;
-//         const waveRect = upperWave.getBoundingClientRect();
-//         const waveBottom = waveRect.bottom + window.scrollY;
-//         const navbarHeight = navbar.offsetHeight;
+    function handleScroll() {
+        const windowWidth = window.innerWidth;
+        const waveRect = upperWave.getBoundingClientRect();
+        const waveBottom = waveRect.bottom + window.scrollY;
+        const navbarHeight = navbar.offsetHeight;
 
-//         if (windowWidth < 992) {
-//             navbar.classList.remove("transparent");
-//             navbar.classList.remove("scrolled");
-//             return;
-//         }
+        if (windowWidth < 992) {
+            navbar.classList.remove("transparent");
+            navbar.classList.remove("scrolled");
+            return;
+        }
 
-//         if (window.scrollY + navbarHeight < waveBottom) {
-//             navbar.classList.add("transparent");
-//             navbar.classList.remove("scrolled");
-//         } else {
-//             navbar.classList.remove("transparent");
-//             navbar.classList.add("scrolled");
-//         }
-//     }
+        if (window.scrollY + navbarHeight < waveBottom) {
+            navbar.classList.add("transparent");
+            navbar.classList.remove("scrolled");
+        } else {
+            navbar.classList.remove("transparent");
+            navbar.classList.add("scrolled");
+        }
+    }
 
-//     handleScroll();
-//     window.addEventListener("scroll", handleScroll);
-//     window.addEventListener("resize", handleScroll);
-// });
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleScroll);
+});
