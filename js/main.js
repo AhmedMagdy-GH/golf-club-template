@@ -103,6 +103,7 @@ loginBtns.forEach(btn => {
         e.preventDefault();
         loginPanel.classList.add('active');
         overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
     });
 });
 
@@ -112,7 +113,9 @@ overlay.addEventListener('click', closeLoginPanel);
 function closeLoginPanel() {
     loginPanel.classList.remove('active');
     overlay.classList.remove('active');
+    document.body.style.overflow = '';
 }
+
 
 /*=================== hamburger animation========================*/
 const hamburger = document.querySelector('.hamburger');
