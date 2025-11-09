@@ -302,8 +302,8 @@ form {
     .contact-address {
         top: 50%;
         left: 50%;
-        height: 200px;
-        max-width:300px;
+        min-height: 170px;
+        min-width:250px;
     }
 
     .contact-address a {
