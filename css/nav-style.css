@@ -48,7 +48,6 @@ html {
 body {
     background-color: white;
     font-family: var(--body-font-family);
-    overflow-x: hidden; /* the reason of the hosrezentel scrool*/
 }
 
 
