@@ -93,19 +93,21 @@ if (!isDropdownPage) {
 
 /* =====================login-panel========================*/
 
-const loginBtns = document.querySelectorAll('.login-btn');
-const closeBtn = document.getElementById('close-btn');
-const loginPanel = document.getElementById('login-panel');
-const overlay = document.getElementById('login-panel-overlay');
+var loginBtns = document.querySelectorAll('.login-btn');
+var closeBtn = document.getElementById('close-btn');
+var loginPanel = document.getElementById('login-panel');
+var overlay = document.getElementById('login-panel-overlay');
 
-loginBtns.forEach(btn => {
-    btn.addEventListener('click', e => {
+for (var i = 0; i < loginBtns.length; i++) {
+    loginBtns[i].addEventListener('click', function (e) {
         e.preventDefault();
         loginPanel.classList.add('active');
         overlay.classList.add('active');
         document.body.style.overflow = 'hidden';
+        document.body.style.position = 'fixed';
+        document.body.style.width = '100%';
     });
-});
+}
 
 closeBtn.addEventListener('click', closeLoginPanel);
 overlay.addEventListener('click', closeLoginPanel);
@@ -114,7 +116,10 @@ function closeLoginPanel() {
     loginPanel.classList.remove('active');
     overlay.classList.remove('active');
     document.body.style.overflow = '';
+    document.body.style.position = '';
+    document.body.style.width = '';
 }
+
 
 
 /*=================== hamburger animation========================*/
