@@ -48,6 +48,7 @@ html {
 body {
     background-color: white;
     font-family: var(--body-font-family);
+    overflow-y: hidden;
 }
 
 .container {
@@ -89,14 +90,14 @@ html {
     height: 100%;
     background: rgba(0, 0, 0, 0.4);
     opacity: 0;
-    visibility: hidden;
+    display: none;
     transition: opacity 0.3s ease;
     z-index: 998;
 }
 
 .login-panel-overlay.active {
     opacity: 1;
-    visibility: visible;
+    display: block;
 }
 
 .login-content h2 {

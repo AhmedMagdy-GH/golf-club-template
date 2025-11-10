@@ -67,13 +67,11 @@ svg {
     bottom: -1px;
     left: 0;
     width: 100vw;
-}
-
-.footer-wave {
     z-index: 0;
 }
 
 .footer-icons-dates {
+    position: relative;
     display: flex;
     justify-content: space-between;
     z-index: 1;
